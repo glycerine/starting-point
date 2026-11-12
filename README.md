@@ -8,7 +8,7 @@ produce Rust instead of Go, but we leave that as an
 exercise for the reader. This project ports C and C++ to Go.
 
 starting-point is a Go command-line tool for starting a Go port of a large
-C/C++ project. The idea is that starting-point gives you just what it names says, a point
+C/C++ project. The idea is that starting-point gives you just what its names says, a point
 from which a repair and fix-up pass can be done more quickly by an bot/LLM than starting
 from scratch. We lock in names of structs and methods early, preventing 
 hallucinations from causing drift that creates compatability problems
