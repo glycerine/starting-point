@@ -1,7 +1,14 @@
-# starting-point
+# starting-point: because C is deprecated.
+
+Projects written in C and C++ are widely recognized in this
+day and age as security accidents just waiting to happen.
+They should all be rewritten in Go. Or Rust. But here we focus on Go.
+It would probably not be hard to modify this project to
+produce Rust instead of Go, but we leave that as an
+exercise for the reader. This project ports C and C++ to Go.
 
 starting-piont is a Go command-line tool for starting a Go port of a large
-C/C++ project. The idea is that starting-point gives you just that, a point
+C/C++ project. The idea is that starting-point gives you just what it names says, a point
 from which a repair and fix-up pass can be done more quickly by an bot/LLM than starting
 from scratch. We lock in names of structs and methods early, preventing 
 hallucinations from causing drift that creates compatability problems
@@ -36,7 +43,7 @@ And that's great! Because: bots often screw up the easy and repetive parts,
 wasting alot of time and tokens. Running starting-point on the
 500K lines of C in the abc hardware verification[5] suite took
 less than 5 minutes to transpile 1625 files (.c, .cpp, and .h).
-That 5 minutes will then save your weeks of LLM time and expense.
+That 5 minutes will then save you weeks of LLM time and expense.
 
 ~~~
 $ starting-point -out abcgo src
@@ -48,6 +55,12 @@ elapsed: 4m 44sec
 Mechanical and idiomatic conversion can get us may 50-75% of the way there. 
 Then we have a strong skeleton on which to tell the bots 
 to build. And we need the same for C++ origins just as often.
+
+Historically, this is the same approach that RSC took when 
+converting the Go compiler from Plan9 C to Go. Internally,
+we lex source into tokens and then do imperfect pattern matching
+on top. We don't expect the output to compile. Getting it to
+compile is one of your agent's first tasks.
 
 The rest of this readme is bot generated.
 
