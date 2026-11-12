@@ -13,7 +13,41 @@ converted mechically, thus saving a ton of time and tokens.
 Our starting-point establishes a basis from which your bot of choice
 can finish the port.
 
+# related work
+
+There are other similar C-to-Go transpilers in various
+states of capability[1][2][3][4], however they:
+
+1. generally do not produce idomatic, readable Go code;
+
+2. try to do the entire transpilation job, with its long
+tail of troubles;
+
+3. Punt on C++ almost completely;
+
+4. Try to translate to an ugly port of the C standard library
+instead of embracing the lovely Go standard library.
+
+starting-point explicitly says: hey, we acknowledge that won't get all the way in
+this first pass. Our first tool has limited scope. But it
+will do what can be done easily, while staying idomatic. 
+
+And that's great! Because: bots often screw up the easy and repetive parts,
+wasting alot of time and tokens.
+
+Mechanical and iodomatic conversion can get us may 50-75% of the way there. 
+Then we have a strong skeleton on which to tell the bots 
+to build. And we need the same for C++ origins just as often.
+
 The rest of this readme is bot generated.
+
+[1] https://modernc.org/ccgo/v4 https://golab.io/talks/to-cgo-or-not-cross-compiling-a-sqlite-driver
+
+[2] https://github.com/elliotchance/c2go
+ 
+[3] https://github.com/gotranspile/cxgo
+
+[4] https://github.com/xgo-dev/c2go
 
 ## Install and translate a tree
 
