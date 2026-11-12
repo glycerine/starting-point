@@ -328,11 +328,7 @@ converted/review counts; the directory CLI prints an aggregate summary. Full
 review details remain in `_starting-point/<source>.json`, keeping console output
 manageable and independent of `-pre`.
 
-Conversions are drafts, not proof of equivalence. The tests compile and execute
-small generated programs and compare a translated C consumer against native C.
-The latest whole-src coverage is recorded in
-[prototype-41-summary.json](experiments/stdlib/prototype-41-summary.json).
-
+Conversions are drafts. They will rarely compile.
 
 Timing queries use the Go time package: time(NULL) becomes time.Now().Unix(),
 and time(&value) also stores the timestamp. clock() uses an explicitly recorded
