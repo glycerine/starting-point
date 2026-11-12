@@ -854,7 +854,7 @@ Renamed the project directory, CLI, module, and Go library:
 
 - Project: `starting-point/`.
 - Command: `starting-point/cmd/starting-point/main.go`.
-- Module: `github.com/glycerine/abc/starting-point`.
+- Module: `github.com/glycerine/starting-point`.
 - Go package: `startingpoint` (the hyphen cannot appear in a Go identifier).
 
 `starting-point abc` now creates `starting-point-cpp2go-abc` in the current

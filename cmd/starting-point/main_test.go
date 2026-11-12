@@ -3,7 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
-	startingpoint "github.com/glycerine/abc/starting-point"
+	startingpoint "github.com/glycerine/starting-point"
 	"os"
 	"path/filepath"
 	"strings"

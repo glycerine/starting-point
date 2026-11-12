@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/glycerine/abc/starting-point"
+	"github.com/glycerine/starting-point"
 )
 
 func main() {

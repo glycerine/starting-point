@@ -142,7 +142,7 @@ still require repair before Go tooling accepts the file.
 
 ## Library and validation
 
-The module is `github.com/glycerine/abc/starting-point`; the Go package name is
+The module is `github.com/glycerine/starting-point`; the Go package name is
 `startingpoint` (Go identifiers cannot contain hyphens). `TranslateTree` implements
 recursive mode. `Analyze`, `AnalyzeWithOptions`, and `ResolvePackage` support
 individual files and explicitly coordinated batches. The CLI is a thin wrapper.
