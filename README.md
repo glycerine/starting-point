@@ -18,7 +18,7 @@ can finish the port.
 There are other similar C-to-Go transpilers in various
 states of capability[1][2][3][4], however they:
 
-1. generally do not produce idomatic, readable Go code;
+1. generally do not produce natural and readable Go code;
 
 2. try to do the entire transpilation job, with its long
 tail of troubles;
@@ -30,12 +30,22 @@ instead of embracing the lovely Go standard library.
 
 starting-point explicitly says: hey, we acknowledge that won't get all the way in
 this first pass. Our first tool has limited scope. But it
-will do what can be done easily, while staying idomatic. 
+will do what can be done easily, while staying idiomatic. 
 
 And that's great! Because: bots often screw up the easy and repetive parts,
-wasting alot of time and tokens.
+wasting alot of time and tokens. Running starting-point on the
+500K lines of C in the abc hardware verification[5] suite took
+less than 5 minutes to transpile 1625 files (.c, .cpp, and .h).
+That 5 minutes will then save your weeks of LLM time and expense.
 
-Mechanical and iodomatic conversion can get us may 50-75% of the way there. 
+~~~
+$ starting-point -out abcgo src
+Translated 1625 files into abcgo (0 source-preserving fallbacks)
+Standard library: 39032 converted sites, 9061 retained review sites (details in _starting-point/*.json)
+elapsed: 4m 44sec
+~~~
+
+Mechanical and idiomatic conversion can get us may 50-75% of the way there. 
 Then we have a strong skeleton on which to tell the bots 
 to build. And we need the same for C++ origins just as often.
 
@@ -48,6 +58,8 @@ The rest of this readme is bot generated.
 [3] https://github.com/gotranspile/cxgo
 
 [4] https://github.com/xgo-dev/c2go
+
+[5] https://github.com/berkeley-abc/abc
 
 ## Install and translate a tree
 
