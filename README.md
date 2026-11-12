@@ -13,7 +13,7 @@ exercise for the reader). This project ports C and C++ to Go.
 
 In short, starting-point is a Go command-line tool for starting a Go port of a large
 C/C++ project. The idea is that starting-point gives you just what the name says, a point
-from which a repair and fix-up pass can be done more quickly by an bot/LLM than starting
+from which a repair and fix-up pass can be done more quickly by a bot/LLM than starting
 from scratch. We lock in names of structs and methods early, preventing 
 hallucinations from causing drift that creates compatability problems
 downstream when trying to bring separately ported pieces together.
