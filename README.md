@@ -37,7 +37,9 @@ tail of troubles;
 3. punt on C++ almost completely;
 
 4. try to translate to an ugly port of the C standard library
-instead of embracing the lovely Go standard library.
+instead of embracing the lovely Go standard library;
+
+5. and they tend to be incomplete and half-finished.
 
 starting-point explicitly says: hey, we acknowledge that won't get all the way in
 this first pass. Our first tool has limited scope. But it
