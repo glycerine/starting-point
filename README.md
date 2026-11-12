@@ -14,7 +14,7 @@ from scratch. We lock in names of structs and methods early, preventing
 hallucinations from causing drift that creates compatability problems
 downstream when trying to bring separately ported pieces together.
 
-The C/C++ comments and are kept in the Go output. 
+Any C/C++ comments are kept in the Go output. 
 Most idioms that have a mechanical Go equivalent are 
 converted mechically, thus saving a ton of time and tokens.
 Our starting-point establishes a basis from which your bot of choice
