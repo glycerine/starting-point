@@ -2,13 +2,17 @@
 
 Projects written in C and C++ are widely recognized in this
 day and age as security accidents just waiting to happen.
-They should all be rewritten in Go. Or Rust. But here we focus on Go.
-It would probably not be hard to modify this project to
-produce Rust instead of Go, but we leave that as an
-exercise for the reader. This project ports C and C++ to Go.
 
-starting-point is a Go command-line tool for starting a Go port of a large
-C/C++ project. The idea is that starting-point gives you just what its names says, a point
+Pulling no punches: they should all be rewritten in Go. 
+
+Or Rust. But here we focus on Go.
+
+(It would probably not be hard to modify this project to
+produce Rust instead of Go, but we leave that as an
+exercise for the reader). This project ports C and C++ to Go.
+
+In short, starting-point is a Go command-line tool for starting a Go port of a large
+C/C++ project. The idea is that starting-point gives you just what the name says, a point
 from which a repair and fix-up pass can be done more quickly by an bot/LLM than starting
 from scratch. We lock in names of structs and methods early, preventing 
 hallucinations from causing drift that creates compatability problems
@@ -30,9 +34,9 @@ states of capability[1][2][3][4], however they:
 2. try to do the entire transpilation job, with its long
 tail of troubles;
 
-3. Punt on C++ almost completely;
+3. punt on C++ almost completely;
 
-4. Try to translate to an ugly port of the C standard library
+4. try to translate to an ugly port of the C standard library
 instead of embracing the lovely Go standard library.
 
 starting-point explicitly says: hey, we acknowledge that won't get all the way in
@@ -62,8 +66,6 @@ we lex source into tokens and then do imperfect pattern matching
 on top. We don't expect the output to compile. Getting it to
 compile is one of your agent's first tasks.
 
-The rest of this readme is bot generated.
-
 [1] https://modernc.org/ccgo/v4 https://golab.io/talks/to-cgo-or-not-cross-compiling-a-sqlite-driver
 
 [2] https://github.com/elliotchance/c2go
@@ -73,6 +75,15 @@ The rest of this readme is bot generated.
 [4] https://github.com/xgo-dev/c2go
 
 [5] https://github.com/berkeley-abc/abc
+
+-----------
+Author: Jason E. Aten, Ph.D.
+
+License: MIT. See LICENSE file.
+
+-----------
+The rest of this readme is bot generated.
+
 
 ## Install and translate a tree
 
@@ -462,9 +473,3 @@ An uninitialized local pointer declaration can combine with its first allocation
 first use must be in the same straight-line block. Earlier uses, address-taking,
 control-flow boundaries and package variables prevent this rewrite. Declaration
 comments and macro inlining annotations are preserved.
-
------------
-Author: Jason E. Aten, Ph.D.
-
-License: MIT. See LICENSE file.
-
