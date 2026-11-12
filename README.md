@@ -43,7 +43,7 @@ starting-point explicitly says: hey, we acknowledge that won't get all the way i
 this first pass. Our first tool has limited scope. But it
 will do what can be done easily, while staying idiomatic. 
 
-And that's great! Because: bots often screw up the easy and repetive parts,
+And that's great! Because: bots often screw up the easy and repetitive parts,
 wasting alot of time and tokens. Running starting-point on the
 500K lines of C in the abc hardware verification[5] suite took
 less than 5 minutes to transpile 1625 files (.c, .cpp, and .h).
